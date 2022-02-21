@@ -712,7 +712,8 @@ border-radius: 0px 0px 4px 4px; */
   top: 0;
   background-color: rgba(0, 0, 0, 0.2);
   z-index: 2;
-  opacity: 0.97;
+  /* opacity: 0.97; */
+  opacity: 0.99;
   transition: opacity 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
@@ -901,11 +902,15 @@ border-radius: 0px 0px 4px 4px; */
   margin-right: 8px;
   border-radius: 2px;
   border: 2px solid #212121;
+  /* text-decoration: underline; */
 }
 
 .modal .checkbox-contract {
   color: var(--accent-logo-color);
+  text-decoration: underline;
 }
+
+
 
 .modal .checkbox-agreement:checked + .checkbox-icon {
   background-size: contain;
@@ -1003,6 +1008,52 @@ border-radius: 0px 0px 4px 4px; */
   clip-path: inset(50%);
   margin: -1px;
 } */
+
+.filter-list > .item {
+  display: flex;
+  margin-left: 8px;
+}
+
+.button-primary {
+  padding: 6px 22px;
+  font-family: inherit;
+  font-weight: 500;
+  font-size: 16px;
+  line-height: calc(26 / 16);
+  text-align: center;
+  background-color: #f5f4fa;
+  color: var(--second-text-color);
+  transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1), 
+  border-color 250ms cubic-bezier(0.4, 0, 0.2, 1), 
+  back-groud 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.button-primary:hover,
+.button-primary:focus {
+  background-color: var(--accent-logo-color);
+  color: var(--third-text-color);
+  box-shadow: var(--filter-button-shadows);
+}
+
+
+/* -_-_-_-_-_-_- PORTFOLIO -_-_-_-_-_-_- */
+
+.portfolio {
+  margin-top: 80px;
+}
+
+.filter-list {
+  display: flex;
+  margin-bottom: 50px;
+  margin-left: auto;
+  margin-right: auto;
+  justify-content: center;
+}
+
+/* 
+flex-basis: calc(100% / 5 - 8px);
+flex-basis: calc(100% / 3 - 30px);
+*/
 
 .filter-list > .item {
   display: flex;
