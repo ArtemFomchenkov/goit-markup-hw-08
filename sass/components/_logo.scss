@@ -1,4 +1,4 @@
-.header__logo-box {
+.header-logo {
     margin-right: auto;
     padding-top: 24px;
     padding-bottom: 25px;
@@ -12,11 +12,11 @@
     color: getcolor('saccent-logo-color');
   }
   
-  .logo-color {
+  .header-logo__color {
     color: getcolor('second-text-color');
   }
   
-  .footer__logo-color {
+  .footer-logo__color {
     color: getColor('third-text-color');
     background-color: getColor('third-bg-color');
   }
