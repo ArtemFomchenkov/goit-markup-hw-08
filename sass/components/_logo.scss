@@ -1,24 +1,25 @@
 .header-logo {
-    margin-right: auto;
-    padding-top: 24px;
-    padding-bottom: 25px;
-  }
+  margin-right: auto;
+  padding-top: 24px;
+  padding-bottom: 25px;
   
-  .logo {
-    font-family: Raleway, sans-serif;
-    font-weight: 700;
-    font-size: 26px;
-    line-height: calc(31 / 26);
-    color: getcolor('saccent-logo-color');
-  }
   
-  .header-logo__color {
-    color: getcolor('second-text-color');
-  }
-  
-  .footer-logo__color {
-    color: getColor('third-text-color');
-    background-color: getColor('third-bg-color');
-  }
+}
 
-//   color: getColor('primary');
+.header-logo__box {
+  font-family: Raleway, sans-serif;
+  font-weight: 700;
+  font-size: 26px;
+  line-height: calc(31 / 26);
+  color: $first-text-color;
+}
+  
+
+.header-logo__color {
+  color: $second-text-color;
+}
+
+.footer-logo__color {
+    color: $third-text-color;
+    background-color: $third-bg-color;
+  }
