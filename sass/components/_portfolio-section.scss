@@ -1,10 +1,12 @@
 /* -_-_-_-_-_-_- PORTFOLIO -_-_-_-_-_-_- */
 
+/* ------- Filter ------- */
+
 .portfolio {
     margin-top: 80px;
   }
   
-  .filter-list {
+  .filter__list {
     display: flex;
     margin-bottom: 50px;
     margin-left: auto;
@@ -12,17 +14,12 @@
     justify-content: center;
   }
   
-  /* 
-  flex-basis: calc(100% / 5 - 8px);
-  flex-basis: calc(100% / 3 - 30px);
-  */
-  
-  .filter-list > .item {
+  .filter__list > .filter__item {
     display: flex;
     margin-left: 8px;
   }
   
-  .button-primary {
+  .filter__button {
     padding: 6px 22px;
     font-family: inherit;
     font-weight: 500;
@@ -30,53 +27,61 @@
     line-height: calc(26 / 16);
     text-align: center;
     background-color: #f5f4fa;
-    color: var(--second-text-color);
+    color: $second-text-color;
     transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1), 
     border-color 250ms cubic-bezier(0.4, 0, 0.2, 1), 
     back-groud 250ms cubic-bezier(0.4, 0, 0.2, 1);
+      &:hover,
+      &:focus {
+    background-color: $accent-logo-color;
+    color: $third-text-color;
+    box-shadow: $filter-button-shadows;
+  }
   }
   
-  .button-primary:hover,
-  .button-primary:focus {
-    background-color: var(--accent-logo-color);
-    color: var(--third-text-color);
-    box-shadow: var(--filter-button-shadows);
-  }
+  
   
   /* ------- Activity ------- */
   
-  .activity-list {
+  .activity__list {
     display: flex;
     flex-wrap: wrap;
     margin-right: -30px;
   }
   
-  .activity-list > .item {
+  .activity__list > .activity__item {
     flex-basis: calc(100% / 3 - 30px);
     margin-right: 30px;
     margin-bottom: 30px;
-    background: var(--nav-bg-color);
+    background: $nav-bg-color;
     border: 1px solid #eeeeee;
     box-sizing: border-box;
   }
   
-  .activity-list .item:nth-child(3n) {
+  .activity__list .activity__item:nth-child(3n) {
     margin-right: 0;
   }
-  .activity-list .item:nth-last-child(-n + 3) {
+  .activity__list .activity__item:nth-last-child(-n + 3) {
     margin-bottom: 0;
   }
   
-  .activity-item-link {
+  .activity__link {
     display: block;
+    transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1), 
+    border-color 250ms cubic-bezier(0.4, 0, 0.2, 1), 
+    back-groud 250ms cubic-bezier(0.4, 0, 0.2, 1);
+      &:hover,
+      &:focus {
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
   }
-  
-  .activity-wrap {
+  }
+
+  .activity__wrap {
     position: relative;
     overflow: hidden;
   }
-  
-  .activity-over-text {
+
+  .activity__wrap-text {
     position: absolute;
     width: 100%;
     height: 100%;
@@ -85,43 +90,34 @@
     font-size: 18px;
     line-height: calc(28 / 18);
     background-color: rgba(33, 150, 243, 0.9);
-    color: var(--third-text-color);
+    color: $third-text-color;
     padding: 63px 24px;
     transform: translateY(100%);
     transition: transform 250ms linear;
   }
-  
-  .activity-item-link {
-    transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1), 
-    border-color 250ms cubic-bezier(0.4, 0, 0.2, 1), 
-    back-groud 250ms cubic-bezier(0.4, 0, 0.2, 1);
-  }
-  
-  .activity-item-link:hover .activity-over-text {
+
+  .activity__link:hover .activity__wrap-text {
     transform: translateY(0%);
   }
   
-  .activity-item-link:hover,
-  .activity-item-link:focus {
-    box-shadow: var(--activity-card-shadows);
+  .activuty__box {
+    padding: 20px 24px;
   }
-  
-  .activity-item-title {
+
+  .activity__box-title {
     margin-bottom: 4px;
     font-weight: 700;
     font-size: 18px;
     line-height: calc(36 / 18);
     letter-spacing: 0.06em;
-    color: var(--second-text-color);
+    color: $second-text-color;
   }
   
-  .activity-item-text {
+  .activity__box-text {
     font-weight: 400;
     font-size: 16px;
     line-height: calc(30 / 16);
-    color: var(--first-text-color);
+    color: $first-text-color;
   }
   
-  .activuty-item-box {
-    padding: 20px 24px;
-  }
+  

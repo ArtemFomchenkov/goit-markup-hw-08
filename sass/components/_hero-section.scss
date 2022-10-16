@@ -1,4 +1,4 @@
-// ------Hero-------
+/* ------- Hero ------- */
 
 .hero {
     max-width: 1600px;
@@ -47,8 +47,8 @@
     letter-spacing: 0.06em;
     color: $third-text-color;
     background-color: $accent-logo-color;
-    .&:hover,
-    .&:focus {
+    &:hover,
+    &:focus {
     color: $third-text-color;
     background-color: #188ce8;
     }
