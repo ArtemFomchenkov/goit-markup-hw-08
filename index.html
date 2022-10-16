@@ -71,14 +71,13 @@
 
         <div class="backdrop is-hidden" data-modal>
             <div class="modal">
-                <button class="close" type="button" data-modal-close>
-                    <svg class="icon-close-svg" width="18px" height="18px">
+                <button class="modal__close" type="button" data-modal-close>
+                    <svg class="modal__close-icon" width="18px" height="18px">
                         <use href="./images/icons.svg#icon-close-cross"></use>
                     </svg>
                 </button>
-                <b class="modal-title">Оставьте свои данные, мы вам перезвоним</b>  
-                <form class="modal-form">   
-                                  
+                <b class="modal__title">Оставьте свои данные, мы вам перезвоним</b>  
+                <form class="modal__form">               
                     <div class="form-field">
                         <label class="modal-label"  for="user-name">Имя</label>
                         <div class="form-field-input">
@@ -135,27 +134,7 @@
                             placeholder="Введите текст"
                             id="user-name"
                         ></textarea>
-                        <!-- rows="8" -->
                     </div>
-                    <!-- <div class="modal-agreement-text-content">
-                        <input 
-                            type="agreement"
-                            name="agreement"
-                            class="modal-agreement-input agreement-hidden"
-                            required 
-                            id="agreement"
-                        />
-                        <label class="modal-agreement-text" for="modal-checkbox">
-                            <span>
-                                <svg class="modal-agreement-icon" width="16" height="15">
-                                    <use href="./images/icons.svg#icon-check"></use>
-                                </svg>
-                            </span>Соглашаюсь с рассылкой и принимаю
-                            <a href="" class="modal-agreement-link">
-                                Условия договора
-                            </a>
-                        </label>                            
-                    </div> -->
                     <div class="modal-agreement-content">   
                         <label class="agreement-label" for="agreement">
                         <input 
@@ -171,7 +150,6 @@
                         </span>
                         </label>
                     </div>
-                    
                     <button type="submit" class="modal-submit">Отправить</button>
                 </form>
             </div>
