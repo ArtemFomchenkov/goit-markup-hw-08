@@ -90,22 +90,25 @@
     margin-bottom: 10px;
   }
 
-  // +++
   
-  .modal-label {
+  .form-field__label {
     display: block;
     font-size: 12px;
     line-height: calc(14 / 12);
     letter-spacing: 0.01em;
     margin-bottom: 4px;
-    color: var(--first-text-color);
+    color: $first-text-color;
   }
+
   
-  .form-field-input {
+  .form-field__input {
     position: relative;
+      &:focus {
+        border-color: $accent-logo-color;
+      }
   }
   
-  .modal-input {
+  .form-field__modal-input {
     width: 100%;
     height: 40px;
     left: 576px;
@@ -117,18 +120,16 @@
     border-radius: 4px;
     cursor: pointer;
     transition: border-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+    &:focus {
+      border-color: $accent-logo-color;
+    }
   }
   
-  .modal-input:focus,
-  .modal-comment-text:focus {
-    border-color: var(--accent-logo-color);
-  }
-  
-  .modal-input:focus + .modal-icon {
+  .form-field__modal-input:focus + .form-field__modal-icon {
     fill: var(--accent-logo-color);
   }
   
-  .modal-icon {
+  .form-field__modal-icon {
     position: absolute;
     left: 12px;
     top: 50%;
@@ -136,7 +137,7 @@
     transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
   }
   
-  .modal-comment-text {
+  .form-field__comment-text {
     width: 100%;
     height: 138px;
     border: 1px solid rgba(33, 33, 33, 0.2);
@@ -151,21 +152,24 @@
     outline: none;
     cursor: pointer;
     transition: border-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
-  }
-  
-  .modal-comment-text::placeholder {
+      &:focus {
+    border-color: $accent-logo-color;
+    }
+      &::placeholder {
     font-size: 12px;
     line-height: calc(14 / 12);
     letter-spacing: 0.01em;
     color: rgba(117, 117, 117, 0.5);
+    }
   }
   
-  .modal-agreement-content {
+  .modal-agreement {
     margin-top: 10px;
     margin-bottom: 30px;
   }
+
   
-  .modal .agreement-label {
+  .modal .modal-agreement__label {
     display: block;
     align-items: center;
     justify-content: center;
@@ -176,7 +180,7 @@
     margin-top: 0;
   }
   
-  .modal .checkbox-agreement {
+  .modal .modal-agreement__checkbox {
     position: absolute;
     overflow: hidden;
     width: 1px;
@@ -187,7 +191,7 @@
     clip: rect(0 0 0 0);
   }
   
-  .modal .checkbox-icon {
+  .modal .modal-agreement__checkbox-icon {
     display: inline-block;
     width: 16px;
     height: 15px;
@@ -198,73 +202,21 @@
     /* text-decoration: underline; */
   }
   
-  .modal .checkbox-contract {
-    color: var(--accent-logo-color);
+  .modal .modal-agreement__checkbox-contract {
+    color: $accent-logo-color;
     text-decoration: underline;
   }
+
   
-  
-  
-  .modal .checkbox-agreement:checked + .checkbox-icon {
+  .modal .modal-agreement__checkbox:checked + .modal-agreement__checkbox-icon {
     background-size: contain;
     background-origin: border-box;
-    border-color: var(--accent-logo-color);
-    background-color: var(--accent-logo-color);
+    border-color: $accent-logo-color;
+    background-color: $accent-logo-color;
     background-image: url(../images/full-check.svg);
   }
   
-  /* Способ Данилко не заработал */
-  
-  /* .modal-agreement-text-content {
-    display: flex;
-    margin-bottom: 30px;
-  } */
-  
-  /* .modal-agreement-text {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    font-size: 14px;
-    line-height: calc(24 / 14);
-    color: var(--first-text-color);
-  } */
-  
-  /* .modal-agreement-text span {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    width: 16px;
-    height: 15px;
-    border: 2px solid var(--second-text-color);
-    border-radius: 2px;
-    margin-right: 7px;
-    
-  } */
-  
-  /* .modal-agreement-icon {
-    fill: transparent;
-  } */
-  
-  /* .modal-agreement-input:checked + .modal-agreement-text span {
-    background-color: var(--accent-logo-color);
-    border: none;
-  } */
-  
-  /* .modal-agreement-input:checked + .modal-agreement-text svg {
-    fill: #ffffff;
-  } */
-  
-  /* .modal-agreement-link {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    text-decoration: underline;
-    font-size: 14px;
-    line-height: calc(24 / 14);
-    color: var(--accent-logo-color);
-  } */
-  
-  .modal-submit {
+  .modal__submit {
     display: block;
     font-weight: 700;
     font-size: 16px;
@@ -279,51 +231,7 @@
     cursor: pointer;
     text-align: center;
     transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
-    color: var(--third-text-color);
-    background: var(--accent-logo-color);
+    color: $third-text-color;
+    background: $accent-logo-color;
   }
   
-  .modal-submit:hover,
-  .modal-submit:focus {
-    background-color: #188ce8;
-  }
-  
-  /* 
-  .agreement-hidden {
-    position: absolute;
-    white-space: nowrap;
-    width: 1px;
-    height: 1px;
-    overflow: hidden;
-    border: 0;
-    padding: 0;
-    clip: rect(0 0 0 0);
-    clip-path: inset(50%);
-    margin: -1px;
-  } */
-  
-  .filter-list > .item {
-    display: flex;
-    margin-left: 8px;
-  }
-  
-  .button-primary {
-    padding: 6px 22px;
-    font-family: inherit;
-    font-weight: 500;
-    font-size: 16px;
-    line-height: calc(26 / 16);
-    text-align: center;
-    background-color: #f5f4fa;
-    color: var(--second-text-color);
-    transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1), 
-    border-color 250ms cubic-bezier(0.4, 0, 0.2, 1), 
-    back-groud 250ms cubic-bezier(0.4, 0, 0.2, 1);
-  }
-  
-  .button-primary:hover,
-  .button-primary:focus {
-    background-color: var(--accent-logo-color);
-    color: var(--third-text-color);
-    box-shadow: var(--filter-button-shadows);
-  }
