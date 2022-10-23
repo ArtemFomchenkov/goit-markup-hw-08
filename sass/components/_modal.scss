@@ -126,7 +126,7 @@
   }
   
   .form-field__modal-input:focus + .form-field__modal-icon {
-    fill: var(--accent-logo-color);
+    fill: $accent-logo-color;
   }
   
   .form-field__modal-icon {
@@ -205,7 +205,6 @@
     color: $accent-logo-color;
     text-decoration: underline;
   }
-
   
   .modal .modal-agreement__checkbox:checked + .modal-agreement__checkbox-icon {
     background-size: contain;
