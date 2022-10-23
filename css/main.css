@@ -125,7 +125,6 @@ img {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  margin-right: auto;
 }
 
 .nav-list {
@@ -227,7 +226,6 @@ img {
 /* ------- Hero ------- */
 .hero {
   max-width: 1600px;
-  height: 600px;
   margin-right: auto;
   margin-left: auto;
   text-align: center;
