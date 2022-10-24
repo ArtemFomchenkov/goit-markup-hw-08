@@ -5,13 +5,14 @@
   .activity__list {
     display: flex;
     flex-wrap: wrap;
-    margin-right: -30px;
+    // margin-right: -30px;
+    gap: 30px;
   }
   
   .activity__list > .activity__item {
-    flex-basis: calc(100% / 3 - 30px);
-    margin-right: 30px;
-    margin-bottom: 30px;
+    flex-basis: calc((100% - 60px) / 3);
+    // margin-right: 30px;
+    // margin-bottom: 30px;
     background: $nav-bg-color;
     border: 1px solid #eeeeee;
     box-sizing: border-box;
