@@ -48,6 +48,7 @@
     line-height: calc(30 / 16);
     letter-spacing: 0.06em;
     color: $third-text-color;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
     background-color: $accent-logo-color;
     &:hover,
     &:focus {

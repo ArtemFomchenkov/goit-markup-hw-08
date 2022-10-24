@@ -266,6 +266,8 @@ img {
   line-height: 1.875;
   letter-spacing: 0.06em;
   color: #ffffff;
+  -webkit-box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
+          box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
   background-color: #2196f3;
 }
 .hero__button-secondary:hover, .hero__button-secondary:focus {
@@ -339,8 +341,6 @@ img {
           box-sizing: border-box;
   border-radius: 50%;
   cursor: pointer;
-  margin-top: 8px;
-  margin-right: 8px;
   padding: 0;
   top: 8px;
   right: 8px;
@@ -371,6 +371,9 @@ img {
 
 .form-field {
   margin-bottom: 10px;
+}
+.form-field:last-child {
+  margin-bottom: 0;
 }
 
 .form-field__label {
@@ -475,12 +478,14 @@ img {
 }
 
 .modal-agreement {
-  margin-top: 10px;
+  margin-top: 20px;
   margin-bottom: 30px;
 }
 
 .modal .modal-agreement__label {
-  display: block;
+  display: -webkit-inline-box;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
@@ -514,6 +519,10 @@ img {
   border-radius: 2px;
   border: 2px solid #212121;
   /* text-decoration: underline; */
+}
+
+.modal .modal-agreement__checkbox-span {
+  color: #757575;
 }
 
 .modal .modal-agreement__checkbox-contract {
@@ -572,8 +581,8 @@ img {
 }
 
 .features__list > .features__item {
-  -ms-flex-preferred-size: calc(25% - 30px);
-      flex-basis: calc(25% - 30px);
+  -ms-flex-preferred-size: calc((100% - 90px) / 4);
+      flex-basis: calc((100% - 90px) / 4);
 }
 
 .features__list .features__item + .features__item {
@@ -590,7 +599,6 @@ img {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  width: 270px;
   height: 120px;
   border-radius: 4px;
   margin-bottom: 30px;
@@ -623,8 +631,8 @@ img {
 }
 
 .job-list > .job-list__item {
-  -ms-flex-preferred-size: calc(33.3333333333% - 30px);
-      flex-basis: calc(33.3333333333% - 30px);
+  -ms-flex-preferred-size: calc((100% - 60px) / 3);
+      flex-basis: calc((100% - 60px) / 3);
 }
 
 .job-list .job-list__item + .job-list__item {
@@ -634,6 +642,7 @@ img {
 .job-list__box {
   position: relative;
   overflow: hidden;
+  width: 370px;
 }
 
 .job-list__text {
@@ -660,21 +669,21 @@ img {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  margin-right: -30px;
+  gap: 30px;
 }
 
 .team-list > .team-list__item {
-  -ms-flex-preferred-size: calc(25% - 30px);
-      flex-basis: calc(25% - 30px);
+  -ms-flex-preferred-size: calc((100% - 90px) / 4);
+      flex-basis: calc((100% - 90px) / 4);
   background-color: #ffffff;
 }
 
 .team-list .team-list__item + .team-list__item {
-  margin-left: 30px;
   color: #2f303a;
 }
 
 .team-list__content {
+  width: 100%;
   padding-top: 30px;
   padding-bottom: 30px;
   -webkit-box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14), px 2px 1px rgba(0, 0, 0, 0.2);
@@ -805,7 +814,7 @@ img {
   margin-bottom: 20px;
 }
 
-.footer-address__contact-list .link {
+.footer .footer-address__contact {
   -webkit-transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
   transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }

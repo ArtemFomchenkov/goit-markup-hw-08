@@ -5,7 +5,7 @@
     
   }
   .job-list > .job-list__item {
-    flex-basis: calc(100% / 3 - 30px);
+    flex-basis: calc((100% - 60px) / 3);
   }
   
   .job-list .job-list__item + .job-list__item {
@@ -15,6 +15,7 @@
   .job-list__box {
     position: relative;
     overflow: hidden;
+    width: 370px;
   }
   
   .job-list__text {
