@@ -1,3 +1,9 @@
+.jobs-hidden {
+  @include tabmax {
+    display: none;
+  }
+}
+
 .job-list {
     display: flex;
     flex-wrap: wrap;

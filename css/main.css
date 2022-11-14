@@ -9,11 +9,39 @@ body {
 }
 
 .container {
-  width: 1200px;
+  width: 100%;
   padding-left: 15px;
   padding-right: 15px;
   margin-left: auto;
   margin-right: auto;
+}
+@media screen and (min-width: 480px) {
+  .container {
+    width: 480px;
+  }
+}
+@media screen and (min-width: 768px) {
+  .container {
+    width: 768px;
+  }
+}
+@media screen and (min-width: 1200px) {
+  .container {
+    width: 1200px;
+  }
+}
+
+.section {
+  padding-top: 60px;
+  padding-bottom: 60px;
+  margin-left: auto;
+  margin-right: auto;
+}
+@media screen and (min-width: 1200px) {
+  .section {
+    padding-top: 94px;
+    padding-bottom: 94px;
+  }
 }
 
 p,
@@ -260,23 +288,6 @@ img {
 .modal-agreement {
   margin-top: 20px;
   margin-bottom: 30px;
-}
-
-.modal .modal-agreement__label {
-  display: -webkit-inline-box;
-  display: -ms-inline-flexbox;
-  display: inline-flex;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  font-weight: normal;
-  font-size: 14px;
-  line-height: 24px;
-  letter-spacing: 0.03em;
-  margin-top: 0;
 }
 
 .modal .modal-agreement__checkbox {
@@ -613,6 +624,12 @@ img {
   font-size: 14px;
   line-height: 1.7142857143;
   color: #757575;
+}
+
+@media screen and (max-width: 1199px) {
+  .jobs-hidden {
+    display: none;
+  }
 }
 
 .job-list {

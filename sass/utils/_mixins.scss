@@ -5,7 +5,7 @@
     letter-spacing: $ls;
   }
   
-  @mixin tel {
+  @mixin mob {
     @media screen and (min-width: 480px) {
       @content;
     }
@@ -16,8 +16,14 @@
       @content;
     }
   }
+
+  @mixin tabmax {
+    @media screen and (max-width: 1199px) {
+      @content;
+    }
+  }
   
-  @mixin desc {
+  @mixin desk {
     @media screen and (min-width: 1200px) {
       @content;
     }
@@ -25,6 +31,12 @@
   
   @mixin media($size) {
     @media screen and (min-width: $size) {
+      @content;
+    }
+  }
+  
+  @mixin x2-ratio {
+    @media (min-device-pixel-ratio: 2), (min-resolution: 192dpi), (min-resolution: 2dppx) {
       @content;
     }
   }

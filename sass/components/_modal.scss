@@ -170,16 +170,16 @@
     margin-bottom: 30px;
   }
   
-  .modal .modal-agreement__label {
-    display: inline-flex;
-    align-items: center;
-    justify-content: center;
-    font-weight: normal;
-    font-size: 14px;
-    line-height: 24px;
-    letter-spacing: 0.03em;
-    margin-top: 0;
-  }
+  // .modal .modal-agreement__label {
+  //   display: inline-flex;
+  //   align-items: center;
+  //   justify-content: center;
+  //   font-weight: normal;
+  //   font-size: 14px;
+  //   line-height: 24px;
+  //   letter-spacing: 0.03em;
+  //   margin-top: 0;
+  // }
   
   .modal .modal-agreement__checkbox {
     position: absolute;
@@ -239,4 +239,5 @@
     color: $third-text-color;
     background: $accent-logo-color;
   }
+  
   
