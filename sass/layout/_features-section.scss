@@ -1,14 +1,30 @@
 /* ------- Features ------- */
   
   .section.features {
-    padding-bottom: 0;
+    @media screen and (min-width: 768px) and (max-width: 1199px) {
+      padding-top: 60px;
+      padding-bottom: 60px;
+    }
+    @include desk {
+      padding-bottom: 0;
+    }
   }
 
   .features__list {
+    display: block;
+    justify-content: space-between;
+
+    @include tab {
+      display: flex;
+      flex-wrap: wrap;
+    }
+
+    @include desk {
     display: flex;
     flex-wrap: wrap;
     margin-top: 0;
     margin-right: -30px;
+    }
   }
 
   .features__item {
@@ -16,14 +32,48 @@
     font-size: 14px;
     line-height: calc(24 / 14);
     color: $first-text-color;
+    @include mobmax {
+      width: 450px;
+      // margin-bottom: 30px;
+    }
+  }
+    // @media screen and (min-width: 768px) and (max-width: 1199px) {
+    //   width: 354px;
+    //   margin-bottom: 30px;
+    // }
+  
+
+  @include mobmax {
+    .features__item:not(:last-child) {
+      margin-bottom: 30px;
+    }
+  }
+
+  @media screen and (min-width: 768px) and (max-width: 1199px) {
+    .features__item {
+      width: 354px;
+    }
+    .features__item:nth-child(2n) {
+      margin-left: 30px;
+    }
+    .features__item:nth-child(-n + 2) {
+      margin-bottom: 30px;
+    }
   }
 
   .features__list > .features__item {
+    @include tab {
+    flex-basis: calc((100% - 30px) / 2);
+    }
+    @include desk {
     flex-basis: calc((100% - 90px) / 4);
+    }
   }
   
   .features__list .features__item + .features__item {
+    @include desk {
     margin-left: 30px;
+    }
   }
   
   .features__icon {
@@ -45,6 +95,9 @@
     text-transform: uppercase;
     margin-bottom: 10px;
     color: $second-text-color;
+    @include mobmax {
+      text-align: center;
+    }
   }
 
   .features__text {

@@ -10,6 +10,12 @@
       @content;
     }
   }
+
+  @mixin mobmax {
+    @media screen and (max-width: 767px) {
+      @content;
+    }
+  }
   
   @mixin tab {
     @media screen and (min-width: 768px) {

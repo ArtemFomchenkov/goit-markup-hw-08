@@ -1,11 +1,61 @@
+.section-title {
+  font-size: 28px;
+  line-height: calc(33 / 28);
+  text-align: center;
+  letter-spacing: 0.03em;
+  color: $second-text-color;
+  @include mob {
+    margin-bottom: 30px;
+  }
+  @include desk {
+    margin-bottom: 50px;
+    font-size: 36px;
+    line-height: calc(42 / 36);
+  }
+}
+
 .customers-list {
     display: flex;
     justify-content: center;
+    flex-wrap: nowrap;
     fill: $social-network-bg-color;
+    @include tabmax {
+      flex-wrap: wrap;
+      gap: 30px;
+    }
   }
   
 .customers-list__item:not(:last-child) {
+    @include desk {
     margin-right: 30px;
+  }
+  }
+
+  @media screen and (max-width: 767px) {
+    .customers-list__item {
+      width: calc((100% - 30px) / 2);
+    }
+  
+    .customers-list__item:nth-child(2n) {
+      margin-right: 0;
+    }
+  
+    .customers-list__item:nth-child(n + 3) {
+      margin-top: 30px;
+    }
+  }
+  
+  @media screen and (min-width: 768px) and (max-width: 1199px) {
+    .customers-list__item {
+      width: calc((100% - 60px) / 3);
+    }
+  
+    .customers-list__item:nth-child(3n + 3) {
+      margin-right: 0;
+    }
+    .customers-list__item:nth-child(n + 4) {
+      margin-top: 30px;
+    }
   }
 
 .customers-list__link {
@@ -14,13 +64,20 @@
     justify-content: center;
     box-sizing: border-box;
     border-radius: 4px;
-    width: 170px;
+    width: 210px;
     height: 92px;
     color: $social-network-bg-color;
     border: 1px solid $social-network-bg-color;
     transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1),
     background-color 250ms cubic-bezier(0.4, 0, 0.2, 1),
     border-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+    @include tab {
+      width: 226px;
+    }
+    @include desk {
+      width: 170px;
+      height: 92px;
+    }
         &:hover,
         &:focus {
     color: $accent-logo-color;
