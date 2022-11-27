@@ -1,16 +1,19 @@
 /* ------- Footer ------- */
 
 .footer-page {
-    display: flex;
+    // display: flex;
     flex-wrap: wrap;
     // margin-right: auto;
     // margin-left: auto;
     background-color: #2f303a;
     padding-top: 60px;
     padding-bottom: 60px;
+    @include tabmax {
+      text-align: center;
+    }
   }
 
-.footer.container {
+.footer {
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
@@ -85,9 +88,15 @@
     text-transform: uppercase;
     margin-bottom: 20px;
     color: #ffffff;
+    @include tabmax {
+      display: block;
+      text-align: center;
+    }
   }
 
 .footer-social__list {
+
+
     display: flex;
     align-items: center;
     justify-content: center;
