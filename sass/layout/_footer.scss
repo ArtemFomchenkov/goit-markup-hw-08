@@ -1,8 +1,10 @@
 /* ------- Footer ------- */
 
 .footer-page {
-    margin-right: auto;
-    margin-left: auto;
+    display: flex;
+    flex-wrap: wrap;
+    // margin-right: auto;
+    // margin-left: auto;
     background-color: #2f303a;
     padding-top: 60px;
     padding-bottom: 60px;
@@ -10,7 +12,23 @@
 
 .footer.container {
     display: flex;
-    align-items: baseline;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 60px;   
+    @include tab {
+      justify-content: space-around;
+    }
+    @include desk {
+      align-items: baseline;
+      justify-content: space-between;
+    }
+  }
+
+.footer-address__contact-list {
+    text-align: center;
+    @include desk {
+      text-align: left;
+    }
   }
 
 .footer-address__box {
