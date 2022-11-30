@@ -1254,9 +1254,7 @@ img {
 }
 
 .subscribe-newsletter__title {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
+  display: inline-block;
   font-weight: 700;
   font-size: 14px;
   line-height: 1.1428571429;
@@ -1272,6 +1270,13 @@ img {
     -webkit-box-pack: center;
         -ms-flex-pack: center;
             justify-content: center;
+  }
+}
+@media screen and (min-width: 1200px) {
+  .subscribe-newsletter__title {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
   }
 }
 
