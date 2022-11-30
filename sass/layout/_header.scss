@@ -21,8 +21,11 @@
   }
   
   .nav-list {
-    display: flex;
-    margin-left: 93px;
+    display: none;
+    @include tab {
+      display: flex;
+      margin-left: 93px;
+    }
   }
   
   // .nav-list .nav-list__item + .nav-list__item {
@@ -86,18 +89,18 @@
   }
   
   .contact-list {
-    display: flex;
-    margin-left: auto;
-    align-items: center;
+    display: none;
+    @include tab {
+      display: flex;
+      margin-left: auto;
+      align-items: center;
+      gap: 50px;
+    }
   }
   
   // .contact-list .item + .item {
   //   margin-left: 50px;
   // }
-
-  .contact-list {
-    gap: 50px;
-  }
   
   .contact-list__link:hover,
   .contact-list__link:focus,
@@ -116,4 +119,10 @@
     align-items: center;
   }
   
-  
+/* ------- Mobile menu ------- */
+
+.menu-open {
+  @include tab {
+    display: none;
+  }
+}
