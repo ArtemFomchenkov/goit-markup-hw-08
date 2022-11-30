@@ -78,7 +78,10 @@
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    margin-left: 70px;
+    @include desk {
+      margin-left: 70px;
+    }
+    
   }
   
 .footer-social__title {
@@ -95,15 +98,17 @@
   }
 
 .footer-social__list {
-
-
     display: flex;
     align-items: center;
     justify-content: center;
   }
 
+.footer-social__item {
+  margin-bottom: 9px;
+}  
+
 .footer-social__item:not(:last-child) {
-    margin-right: 10px;
+    margin-right: 9px;
   }
 
 .footer-social__link {
@@ -128,7 +133,13 @@
 /* ------- Footer Subscribe Newsletter Follower ------- */
   
 .subscribe-newsletter {
-  margin-left: auto;
+  @include tab {
+
+  }
+  @include desk {
+    margin-left: auto;
+  }
+  
 }
 
 .subscribe-newsletter__title {
@@ -139,15 +150,26 @@
   text-transform: uppercase;
   margin-bottom: 20px;
   color: $third-text-color;
+  @include tabmax {
+    align-items: center;
+    justify-content: center;
+  }
 }
 
 .subscribe-newsletter__form {
   display: flex;
-  flex-direction: row;
+  flex-direction: column;
+  @include tabmax {
+    align-items: center;
+    justify-content: center;
+  }
+  @include desk {
+    flex-direction: row;
+  }
 }
 
 .subscribe-newsletter__input {
-  width: 358px;
+  width: 450px;
   height: 50px;
   font-size: 16px;
   line-height: calc(20 / 16);
@@ -159,7 +181,12 @@
   border-radius: 4px;
   outline: none;
   padding: 15px 16px;
+  margin-bottom: 20px;
   transition: 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  @include desk {
+    width: 358px;
+    height: 50px;
+  }
     &:hover,
     &:focus {
   border-color: #2196F3;
@@ -183,7 +210,9 @@
   border: none;
   transition: 250ms cubic-bezier(0.4, 0, 0.2, 1);
   padding: 10px 28px 10px 29px;
-  margin-left: 12px;
+  @include desk {
+    margin-left: 12px;
+  }
   cursor: pointer;
     &:hover,
     &:focus {
