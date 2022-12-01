@@ -63,9 +63,11 @@
     }
   }
   
-  .hero-container {
-    margin-top: 80px;
-  }
+  // .hero-container {
+  //   @include desk {
+  //     margin-top: 80px;
+  //   }
+  // }
   
   .hero__title {
     margin-top: 0;

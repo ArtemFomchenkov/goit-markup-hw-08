@@ -7,9 +7,13 @@
 .header-logo__box {
   font-family: Raleway, sans-serif;
   font-weight: 700;
-  font-size: 26px;
-  line-height: calc(31 / 26);
+  font-size: 24px;
+  line-height: calc(28 / 24);
   color: $accent-logo-color;
+  @include desk {
+    font-size: 26px;
+    line-height: calc(31 / 26);
+  }
 }
   
 
@@ -25,9 +29,13 @@
 .footer-logo__box {
     font-family: Raleway, sans-serif;
     font-weight: 700;
-    font-size: 26px;
-    line-height: calc(31 / 26);
+    font-size: 24px;
+    line-height: calc(28 / 24);
     color: $accent-logo-color;
+    @include desk {
+      font-size: 26px;
+      line-height: calc(31 / 26);
+    }
   }
 
   // .footer-logo__box {
