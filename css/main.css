@@ -693,6 +693,7 @@ img {
   background: #ffffff;
   z-index: 1;
   padding: 48px 83px 48px 40px;
+  overflow: auto;
 }
 @media screen and (min-width: 768px) {
   .mobile-menu {
@@ -700,7 +701,7 @@ img {
   }
 }
 
-.mobile-menu > .container {
+.mobile-menu > .mob-container {
   height: 100%;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -712,7 +713,6 @@ img {
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
-  overflow: auto;
 }
 
 .close-modal-icon {

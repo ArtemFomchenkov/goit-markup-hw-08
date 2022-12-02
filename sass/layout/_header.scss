@@ -173,18 +173,22 @@
   left: 0;
   background: #ffffff;
   z-index: 1;
+  // padding-top: 48px;
+  // padding-bottom: 48px;
+  // padding-left: 40px;
   padding: 48px 83px 48px 40px;
+  overflow: auto;
   @include tab {
     display: none;
   }
 }
 
-.mobile-menu > .container {
+.mobile-menu > .mob-container {
   height: 100%;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
-  overflow: auto;
+  // overflow: auto;
   // padding: 48px 83px 48px 40px;
 }
 
