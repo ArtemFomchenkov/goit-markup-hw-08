@@ -15,11 +15,11 @@
   // Прозрачность модального окна
   //   opacity: 0.97;
 
-  .backdrop.is-hidden {
-    visibility: hidden;
-    opacity: 0;
-    pointer-events: none;
-  }
+  // .backdrop.is-hidden {
+  //   visibility: hidden;
+  //   opacity: 0;
+  //   pointer-events: none;
+  // }
   
   .backdrop .is-hidde .modal {
     transform: translate(-50%, -50%) scale(1.1);
